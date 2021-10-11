@@ -60,9 +60,7 @@ const Setup_systemShow = () => {
                             <CardBody className="CardBody-WithBoxContent">
                                 จัดการเกี่ยวกับเว็บและโลโก้ทุนการศึกษา
                                 <div className="borderline" />
-                                <Button className="Button-Style headerButton" outline color="info" size="sm" href="/staff/Manage_system">
-                                    + ชื่อเว็บและโลโก้ทุนการศึกษา
-                                </Button>
+                               
                             </CardBody>
                         </div>
 
