@@ -19,17 +19,17 @@ const Resultbox = ({ id }) => {
     return (
         <>
                 <Card className="CardBackground-2" style={{ minHeight: '200px' }}>
-                    <a href={"/ScholarshipNotify/" + resultScholar.id}>
+                    <a href={"/ScholarshipNotify/" + resultScholar.result_id}>
                         <CardHeader className="" style={{ background: "#dadce0", borderRadius: "10px", borderBottom: "0px" }}>
                             <h6 className="text-dark" style={{ margin: '0px' }}>
-                                <b>{resultScholar.name}</b>
+                                <b>{resultScholar.result_name}</b>
                             </h6>
                         </CardHeader>
                     </a>
                     <CardBody className="text-secondary" style={{ padding: "10px" }}>
                     {resultScholar.content}
                         <div className="borderline" />
-                        <Button href={"/ScholarshipNotify/" + resultScholar.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
+                        <Button href={"/ScholarshipNotify/" + resultScholar.result_id} className="Button-Style" outline >อ่านทั้งหมด</Button>
                     </CardBody>
                 </Card>
         </>
