@@ -25,7 +25,7 @@ const Userinfoprops = ({ id }) => {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/profilestudent/" + id)//ส่งค่าไปแอดใน DB
+        axios.get("https://flashworkbackend.xyz/Mback/public/profilestudent/" + id)//ส่งค่าไปแอดใน DB
             .then((response) => {
                 setInfo(response.data);
             });
