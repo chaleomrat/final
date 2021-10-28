@@ -12,7 +12,7 @@ const Listnameuser = ({ id }) => {
 
     const [listname, setlistname] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/userlistbyclasspage/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/userlistbyclasspage/" + id)
             .then((response) => {
                 setlistname(response.data);
             }, []);
