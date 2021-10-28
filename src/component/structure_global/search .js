@@ -18,7 +18,7 @@ const Search = () => {
   useEffect(() => {
     
 
-    const url = "http://localhost:8080/Mback/public/Searchshcholarship?q=" 
+    const url = "https://flashworkbackend.xyz/Mback/public/Searchshcholarship?q=" 
 
     axios.get(url)//โดย axios นั่นดึงค่า url
       .then((response) => {//ใช้ตัวแปรค่า คือ responseเพื่อเก็บค่า
