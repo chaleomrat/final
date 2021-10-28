@@ -43,7 +43,7 @@ const Uplevel = ({ classroom }) => {
                 'alert'
             )
         } else {
-            axios.put("http://localhost:8080/Mback/public/UpuserClass/" + s_class, data)//ส่งid และ dataค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/UpuserClass/" + s_class, data)//ส่งid และ dataค่าไปแอดใน DB
                 .then((response) => {
 
                     Swal.fire(
