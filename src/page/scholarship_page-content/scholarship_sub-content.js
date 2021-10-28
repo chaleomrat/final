@@ -40,7 +40,7 @@ const Subpage = ({ id }) => {
     const [fmessage, setFmessage] = useState(initMessage);
 
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/findSshcholarshippage/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findSshcholarshippage/" + id)
             .then((response) => {
                 setSubscholar(response.data);
             });
@@ -48,7 +48,7 @@ const Subpage = ({ id }) => {
         //     .then((response) => {
         //         setSubscholar(response.data);
         //     });
-        axios.get("http://localhost:8080/Mback/public/commentfind/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/commentfind/" + id)
             .then((response) => {
                 setcommentstudent(response.data);
             });
@@ -56,7 +56,7 @@ const Subpage = ({ id }) => {
             sid: status.id,
             schid: id
         }
-        axios.post("http://localhost:8080/Mback/public/checkfollowScholar", data)
+        axios.post("https://flashworkbackend.xyz/Mback/public/checkfollowScholar", data)
             .then((response) => {
                 setFmessage(response.data);
             });
@@ -69,7 +69,7 @@ const Subpage = ({ id }) => {
         page();
     }, []);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + Subscholar.mid)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + Subscholar.mid)
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -110,7 +110,7 @@ const Subpage = ({ id }) => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/comment", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/comment", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     if (res.data.message == "success") {
                         ////ต่อตรงนี้
@@ -142,7 +142,7 @@ const Subpage = ({ id }) => {
     const delectComment = async (cid) => {
 
         if (cid) {
-            axios.delete("http://localhost:8080/Mback/public/commentdelect/" + cid)
+            axios.delete("https://flashworkbackend.xyz/Mback/public/commentdelect/" + cid)
                 .then((response) => {
                     Swal.fire(
                         'ดำเนินการสำเร็จ',
@@ -164,7 +164,7 @@ const Subpage = ({ id }) => {
 
         if (data != "") {
             // console.log(data)
-            axios.post("http://localhost:8080/Mback/public/followScholar", data)
+            axios.post("https://flashworkbackend.xyz/Mback/public/followScholar", data)
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -193,7 +193,7 @@ const Subpage = ({ id }) => {
     const Unfollow = async (nid) => {
 
         if (nid) {
-            axios.delete("http://localhost:8080/Mback/public/Unfollow/" + nid)
+            axios.delete("https://flashworkbackend.xyz/Mback/public/Unfollow/" + nid)
                 .then((response) => {
                     Swal.fire(
                         'ดำเนินการสำเร็จ',
@@ -207,7 +207,7 @@ const Subpage = ({ id }) => {
     };
 
     const showallcomment = async () => {
-        axios.get("http://localhost:8080/Mback/public/commentfindall/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/commentfindall/" + id)
             .then((response) => {
                 setcommentstudent(response.data);
 
