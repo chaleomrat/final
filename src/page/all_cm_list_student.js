@@ -20,7 +20,7 @@ const Allcmlist = (props) => {
     const [Resultlist, setResultlist] = useState([]);
     useEffect(() => {
 
-        axios.get("http://localhost:8080/Mback/public/nottiflyfollowcommentAll/" + status.id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcommentAll/" + status.id)
             .then((response) => {
                 setResultlist(response.data);
             });
