@@ -13,7 +13,7 @@ const AllSchollar = (props) => {
 
     const [Mscholar, setMscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/allMshcholarship")
+        axios.get("https://flashworkbackend.xyz/Mback/public/allMshcholarship")
             .then((response) => {
                 setMscholar(response.data);
             });
