@@ -24,11 +24,11 @@ const Home = (props) => {
     const [Resultboxs, setResultboxs] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/Mshcholarship")
+        axios.get("http://flashworkbackend.xyz/Mback/public/Mshcholarship")
             .then((response) => {
                 setMscholar(response.data);
             });
-            axios.get("http://localhost:8080/Mback/public/resultlist")
+            axios.get("http://flashworkbackend.xyz/Mback/public/resultlist")
             .then((response) => {
                 setResultboxs(response.data);
             });
