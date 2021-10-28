@@ -28,11 +28,11 @@ const ScholarshipCreateMain = () => {
     ///////////////////////////agen///////////////
     const [Agen, setAgen] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/addAgency")
+        axios.get("https://flashworkbackend.xyz/Mback/public/addAgency")
             .then((response) => {
                 setAgen(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/scholarTypeshow")
+        axios.get("https://flashworkbackend.xyz/Mback/public/scholarTypeshow")
             .then((response) => {
                 setType(response.data);
             });
@@ -147,7 +147,7 @@ const ScholarshipCreateMain = () => {
                 )
 
             } else {
-                axios.post("http://localhost:8080/Mback/public/addMshcholarship", data)//ส่งค่าไปแอดใน DB
+                axios.post("https://flashworkbackend.xyz/Mback/public/addMshcholarship", data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
