@@ -29,7 +29,7 @@ const Editimg = ({ msch_id }) => {
 
     const [Mscholar, setMscholar] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + msch_id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + msch_id)
             .then((response) => {
                 setMscholar(response.data);
             }, []);
@@ -121,7 +121,7 @@ const Editimg = ({ msch_id }) => {
             )
                 .then(() => window.location.reload())
         } else {
-            axios.put("http://localhost:8080/Mback/public/editMshcholarship_img/" + msch_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/editMshcholarship_img/" + msch_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
