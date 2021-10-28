@@ -28,7 +28,7 @@ const Newresult = () => {
     //////////////////////รายชื่อทุน/////////////////////
     useEffect(() => {
 
-        axios.get("http://localhost:8080/Mback/public/allSubscholarship")
+        axios.get("https://flashworkbackend.xyz/Mback/public/allSubscholarship")
             .then((response) => {
                 setlist(response.data);
             });
@@ -78,7 +78,7 @@ const Newresult = () => {
                 )
 
             } else {
-                axios.post("http://localhost:8080/Mback/public/addresult", data)//ส่งค่าไปแอดใน DB
+                axios.post("https://flashworkbackend.xyz/Mback/public/addresult", data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
