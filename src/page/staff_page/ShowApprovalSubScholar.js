@@ -26,7 +26,7 @@ const Scholarship = () => {
     }
 const [Mscholar, setMscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/Mshcholarship")
+        axios.get("https://flashworkbackend.xyz/Mback/public/Mshcholarship")
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -34,7 +34,7 @@ const [Mscholar, setMscholar] = useState([]);
 
     const [Sscholar, setSscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/endshcholarship")
+        axios.get("https://flashworkbackend.xyz/Mback/public/endshcholarship")
             .then((response) => {
                 setSscholar(response.data);
             });
