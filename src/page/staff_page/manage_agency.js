@@ -25,7 +25,7 @@ const ManageAgency = () => {
     /////////////////////////// show agency ///////////////
     const [AgenShow, setAgen] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/addAgency")
+        axios.get("https://flashworkbackend.xyz/Mback/public/addAgency")
             .then((response) => {
                 setAgen(response.data);
             });
@@ -63,7 +63,7 @@ const ManageAgency = () => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/addAgency", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/addAgency", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -97,7 +97,7 @@ const ManageAgency = () => {
     const delectAgen = async (cid) => {
 
         if (cid) {
-            axios.delete("http://localhost:8080/Mback/public/delectAgency/" + cid)
+            axios.delete("https://flashworkbackend.xyz/Mback/public/delectAgency/" + cid)
                 .then((response) => {
                     if (response.data.message == "success") {
                         Swal.fire(
