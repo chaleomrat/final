@@ -25,7 +25,7 @@ const ManageAgency = () => {
     /////////////////////////// show agency ///////////////
     const [AgenShow, setAgen] = useState([]);
     const page = () => {
-        axios.get("https://flashworkbackend.xyz/Mback/public/addAgency")
+        axios.get("https://flashworkbackend.xyz/Mback/public/Agency")
             .then((response) => {
                 setAgen(response.data);
             });
