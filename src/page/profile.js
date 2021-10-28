@@ -47,12 +47,12 @@ const Profile = () => {
     const page = () => {
         if (ses.status == "นักเรียน") {
 
-            axios.get("http://localhost:8080/Mback/public/profilestudent/" + ses.id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/profilestudent/" + ses.id)
                 .then((response) => {
                     setInfo(response.data);
                 });
         } else if (ses.status == "อาจารย์") {
-            axios.get("http://localhost:8080/Mback/public/profilestaffs/" + ses.id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/profilestaffs/" + ses.id)
                 .then((response) => {
                     setInfo(response.data);
                 });
@@ -76,7 +76,7 @@ const Profile = () => {
             tel: uinfo.tel
         };//เอาค่าที่รับจาก form มาใส่ใน array
         if (ses.status == "นักเรียน") {
-            axios.put("http://localhost:8080/Mback/public/editinfostudent/" + ses.id, Dataedit)//ส่งid และ dataค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/editinfostudent/" + ses.id, Dataedit)//ส่งid และ dataค่าไปแอดใน DB
                 .then((response) => {
                     console.log(ses.id);
                     Swal.fire(
@@ -91,7 +91,7 @@ const Profile = () => {
                     console.log(error);
                 });//ใช้ ดัก Error
         } else {
-            axios.put("http://localhost:8080/Mback/public/editinfostaff/" + ses.id, Dataedit)//ส่งid และ dataค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/editinfostaff/" + ses.id, Dataedit)//ส่งid และ dataค่าไปแอดใน DB
                 .then((response) => {
                     console.log(ses.id);
                     Swal.fire(
@@ -185,7 +185,7 @@ const Profile = () => {
                 .then(() => window.location.reload())
         } else {
             if (ses.status == "นักเรียน") {
-                axios.put("http://localhost:8080/Mback/public/editimgstudent/" + ses.id, data)//ส่งค่าไปแอดใน DB
+                axios.put("https://flashworkbackend.xyz/Mback/public/editimgstudent/" + ses.id, data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
@@ -215,7 +215,7 @@ const Profile = () => {
 
             } else if (ses.status == "อาจารย์") {
 
-                axios.put("http://localhost:8080/Mback/public/editimgstaff/" + ses.id, data)//ส่งค่าไปแอดใน DB
+                axios.put("https://flashworkbackend.xyz/Mback/public/editimgstaff/" + ses.id, data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
