@@ -46,7 +46,7 @@ const Edit = ({ cm }) => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/commentedit/" + cm.cm_id, data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/commentedit/" + cm.cm_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     if (res.data.message == "success") {
                         ////ต่อตรงนี้
