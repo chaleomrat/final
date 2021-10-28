@@ -18,15 +18,15 @@ const Medit = ({ id }) => {
 
     const [Agen, setAgen] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/addAgency")
+        axios.get("https://flashworkbackend.xyz/Mback/public/addAgency")
             .then((response) => {
                 setAgen(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/scholarTypeshow")
+        axios.get("https://flashworkbackend.xyz/Mback/public/scholarTypeshow")
             .then((response) => {
                 setType(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -78,7 +78,7 @@ const Medit = ({ id }) => {
                 )
 
             } else {
-                axios.put("http://localhost:8080/Mback/public/editMshcholarship/" + id, data)//ส่งค่าไปแอดใน DB
+                axios.put("https://flashworkbackend.xyz/Mback/public/editMshcholarship/" + id, data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
