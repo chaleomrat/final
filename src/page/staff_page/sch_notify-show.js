@@ -23,7 +23,7 @@ const Result_pagestaff = () => {
 
     const [Resultlist, setResultlist] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/ResultAndUsername")
+        axios.get("https://flashworkbackend.xyz/Mback/public/ResultAndUsername")
             .then((response) => {
                 setResultlist(response.data);
             });
