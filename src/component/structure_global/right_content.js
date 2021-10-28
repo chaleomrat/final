@@ -17,23 +17,23 @@ const RightContent = () => {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/endshcholarshiptoday")
+        axios.get("https://flashworkbackend.xyz/Mback/public/endshcholarshiptoday")
             .then((response) => {
                 setMscholar(response.data);
             });
         if (status.id != null && status.status == "นักเรียน") {
-            axios.get("http://localhost:8080/Mback/public/nottiflyfollowcomment/" + status.id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcomment/" + status.id)
                 .then((response) => {
                     setFollowCommet(response.data);
                 });
         }
         if (status.id != null && status.status == "อาจารย์" || status.status == "ผู้ดูแล") {
-            axios.get("http://localhost:8080/Mback/public/nottiflyfollowcommentStaff/" + status.id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcommentStaff/" + status.id)
                 .then((response) => {
                     setFollowCommet(response.data);
                 });
         } if (status.id != null && status.status == "อาจารย์" || status.status == "ผู้ดูแล") {
-            axios.get("http://localhost:8080/Mback/public/nottiflyfollowcommentStaffMain/" + status.id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcommentStaffMain/" + status.id)
                 .then((response) => {
                     setMainscholarCommet(response.data);
                 });
