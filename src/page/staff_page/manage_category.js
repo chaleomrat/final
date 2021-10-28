@@ -24,7 +24,7 @@ const ManageCategory = () => {
 
     const [type, setType] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/scholarTypeshow")
+        axios.get("https://flashworkbackend.xyz/Mback/public/scholarTypeshow")
             .then((response) => {
                 setType(response.data);
             });
@@ -62,7 +62,7 @@ const ManageCategory = () => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/addScholarType", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/addScholarType", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -96,7 +96,7 @@ const ManageCategory = () => {
     const delectType = async (a) => {
 
 
-        axios.delete("http://localhost:8080/Mback/public/delectType/" + a)
+        axios.delete("https://flashworkbackend.xyz/Mback/public/delectType/" + a)
             .then((response) => {
                 if (response.data.message == "success") {
                     Swal.fire(
