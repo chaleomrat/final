@@ -29,7 +29,7 @@ const Editimg = ({ sst_id }) => {
 
     const [UpLogo, SetUpLogo] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/getSetup_system/" + sst_id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/getSetup_system/" + sst_id)
             .then((response) => {
                 SetUpLogo(response.data);
             }, []);
@@ -121,7 +121,7 @@ const Editimg = ({ sst_id }) => {
             )
                 .then(() => window.location.reload())
         } else {
-            axios.put("http://localhost:8080/Mback/public/editSetup_system/" + sst_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/editSetup_system/" + sst_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
