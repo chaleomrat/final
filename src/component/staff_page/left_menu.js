@@ -80,7 +80,7 @@ const StaffLeftMenu = () => {
                             </CardBody>
                         </Card>
 
-                        {status.status == "ผู้ดูแล" &&
+                        {status.status == "ผู้ดูแล" ||status.status == "อาจารย์" &&
                             <Card className="CardBackground-1">
                                 <CardBody className="CardBody">
                                     <div className="borderline" style={{ margin: '0px' }}/>
