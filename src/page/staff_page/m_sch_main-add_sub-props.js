@@ -36,7 +36,7 @@ const ScholarshipCreateSub = ({ id }) => {
     }
     const [Mscholar, setMscholar] = useState(initMscholar);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -167,7 +167,7 @@ const ScholarshipCreateSub = ({ id }) => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/addSubscholarship", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/addSubscholarship", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
