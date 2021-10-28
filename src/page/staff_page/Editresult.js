@@ -16,11 +16,11 @@ const Editresult = ({ id }) => {
     
     useEffect(() => {
         
-            axios.get("http://localhost:8080/Mback/public/allSubscholarship")
+            axios.get("https://flashworkbackend.xyz/Mback/public/allSubscholarship")
             .then((response) => {
                 setType(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/findresultshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findresultshcholarship/" + id)
             .then((response) => {
                 setEditresult(response.data);
             });
@@ -68,7 +68,7 @@ const Editresult = ({ id }) => {
                 )
 
             } else {
-                axios.put("http://localhost:8080/Mback/public/editresult/"+id, data)//ส่งค่าไปแอดใน DB
+                axios.put("https://flashworkbackend.xyz/Mback/public/editresult/"+id, data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
