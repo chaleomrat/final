@@ -13,7 +13,7 @@ const Allresult = (props) => {
 
     const [Resultlist, setResultlist] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/allresultlist")
+        axios.get("https://flashworkbackend.xyz/Mback/public/allresultlist")
             .then((response) => {
                 setResultlist(response.data);
             });
