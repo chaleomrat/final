@@ -21,7 +21,7 @@ const AllMainscholar_commentStaff_page = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:8080/Mback/public/nottiflyfollowcommentStaffMainAll/" + status.id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcommentStaffMainAll/" + status.id)
             .then((response) => {
                 setFollowCommet(response.data);
             });
