@@ -11,7 +11,7 @@ const title = 'ชื่อเว็บและโลโก้ทุนกา�
 const Setup_systemShow = () => {
     const [Setup_system, setSetup_system] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/Setup_system")
+        axios.get("https://flashworkbackend.xyz/Mback/public/Setup_system")
             .then((response) => {
                 setSetup_system(response.data);
             });
