@@ -84,7 +84,7 @@ const Register = () => {
     
             } else {
                 if (teacher['password'] == teacher['repassword']) {
-                    axios.post("http://localhost:8080/Mback/public/registeruser", teacher)//ส่งค่าไปแอดใน DB
+                    axios.post("https://flashworkbackend.xyz/Mback/public/registeruser", teacher)//ส่งค่าไปแอดใน DB
                         .then((res) => {
                             console.log(res.data.message);
                             if (res.data.message == "success") {
@@ -127,7 +127,7 @@ const Register = () => {
     
             } else {
                 if (data['password'] == data['repassword']) {
-                    axios.post("http://localhost:8080/Mback/public/registeruser", data)//ส่งค่าไปแอดใน DB
+                    axios.post("https://flashworkbackend.xyz/Mback/public/registeruser", data)//ส่งค่าไปแอดใน DB
                         .then((res) => {
                             console.log(res.data.message);
                             if (res.data.message == "success") {
