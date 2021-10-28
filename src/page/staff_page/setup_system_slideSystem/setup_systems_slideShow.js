@@ -11,7 +11,7 @@ const title = 'ทุนการศึกษา - ระบบผู้ดู�
 const SlideShow = () => {
     const [Setup_slide, setSetup_slide] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/Setup_slide")
+        axios.get("https://flashworkbackend.xyz/Mback/public/Setup_slide")
             .then((response) => {
                 setSetup_slide(response.data);
             });
