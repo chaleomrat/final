@@ -9,7 +9,7 @@ const Agenprops = ({id}) => {
     const [Scholarname, setScholarname] = useState([]);
     const scholarlist = () => {
 
-        axios.get("http://localhost:8080/Mback/public/listscholarbyAgen/"+id).then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/listscholarbyAgen/"+id).then((response) => {
             setScholarname(response.data);
         }); 
      };
