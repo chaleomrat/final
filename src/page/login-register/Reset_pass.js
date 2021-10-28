@@ -43,7 +43,7 @@ const Reset_pass = () => {
             repass: Email.re_pass,
         };//เอาค่าที่รับจาก form มาใส่ใน json
         if (data.pass == data.repass) {
-            axios.post("http://localhost:8080/Mback/public/Resetpass", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/Resetpass", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     if (res.data.message == "suscess") {
 
