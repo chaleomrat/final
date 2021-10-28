@@ -8,7 +8,7 @@ const Year_page = () => {
     const [Scholarname, setScholarname] = useState([]);
     const scholarlist = () => {
 
-        axios.get("http://localhost:8080/Mback/public/listYEAR").then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/listYEAR").then((response) => {
             setScholarname(response.data);
         }); 
      };
