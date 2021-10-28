@@ -54,7 +54,7 @@ const Login = () => {
 
         };//เอาค่าที่รับจาก form มาใส่ใน json
 
-        axios.post("http://localhost:8080/Mback/public/Login", data)//ส่งค่าไปแอดใน DB
+        axios.post("https://flashworkbackend.xyz/Mback/public/Login", data)//ส่งค่าไปแอดใน DB
             .then((res) => {
                 console.log(res.data.message);
                 if (res.data.message == "Student") {
