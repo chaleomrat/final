@@ -19,21 +19,7 @@ const ScholarshipCreateMain = () => {
         status: localStorage.getItem('status')
     }
 
-    // ///////////////////////////agen///////////////
-    // const [Agen, setAgen] = useState([]);
-    // useEffect(() => {
-    //     axios.get("http://localhost:8080/Mback/public/addAgency")
-    //         .then((response) => {
-    //             setAgen(response.data);
-    //         });
-    //     axios.get("http://localhost:8080/Mback/public/scholarTypeshow")
-    //         .then((response) => {
-    //             setType(response.data);
-    //         });
-    // }, []);
-    // ////////////////////////type/////////////////////
-    // const [type, setType] = useState([]);
-    /////////////////////////////////////////////////////
+ 
     const initScholar = {
 
         ssd_silde: "",
@@ -138,7 +124,7 @@ const ScholarshipCreateMain = () => {
                 )
 
             } else {
-                axios.post("http://localhost:8080/Mback/public/Setup_slide", data)//ส่งค่าไปแอดใน DB
+                axios.post("https://flashworkbackend.xyz/Mback/public/Setup_slide", data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
