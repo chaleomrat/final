@@ -9,7 +9,7 @@ const Typeprops = ({id}) => {
     const [Scholarname, setScholarname] = useState([]);
     const scholarlist = () => {
 
-        axios.get("http://localhost:8080/Mback/public/listscholarbyType/"+id).then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/listscholarbyType/"+id).then((response) => {
             setScholarname(response.data);
         }); 
      };
