@@ -10,7 +10,7 @@ const Resultbox = ({ id }) => {
     }
     const [resultScholar, setMscholar] = useState(initMscholar);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/findresultshcholarship/" + id)
+        axios.get("http://flashworkbackend.xyz/Mback/public/findresultshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
