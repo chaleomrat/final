@@ -25,7 +25,7 @@ const ManageUser = () => {
 
     const [Userlist, setUserlist] = useState([]);
     const updateUserlist = () => {
-        axios.get("http://localhost:8080/Mback/public/userliststaff").then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/userliststaff").then((response) => {
             setUserlist(response.data);
         });
     };
