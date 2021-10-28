@@ -35,16 +35,16 @@ const Mcontent = ({ id }) => {
     //////////////////////////////////////////////////////////////////
     const [commentsinfostudent, setcommentstudent] = useState([]);
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
 
-        axios.get("http://localhost:8080/Mback/public/findSshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findSshcholarship/" + id)
             .then((response) => {
                 setSubscholar(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/commentfind/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/commentfind/" + id)
             .then((response) => {
                 setcommentstudent(response.data);
             });
@@ -84,7 +84,7 @@ const Mcontent = ({ id }) => {
             )
 
         } else {
-            axios.post("http://localhost:8080/Mback/public/comment", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/comment", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     if (res.data.message == "success") {
                         ////ต่อตรงนี้
@@ -115,7 +115,7 @@ const Mcontent = ({ id }) => {
     const delectComment = async (cid) => {
 
         if (cid) {
-            axios.delete("http://localhost:8080/Mback/public/commentdelect/" + cid)
+            axios.delete("https://flashworkbackend.xyz/Mback/public/commentdelect/" + cid)
                 .then((response) => {
                     Swal.fire(
                         'ดำเนินการสำเร็จ',
@@ -129,7 +129,7 @@ const Mcontent = ({ id }) => {
     };
 
     const showallcomment = async () => {
-        axios.get("http://localhost:8080/Mback/public/commentfindall/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/commentfindall/" + id)
             .then((response) => {
                 setcommentstudent(response.data);
             }, []);
