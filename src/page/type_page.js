@@ -9,7 +9,7 @@ const Type_page = () => {
     const [Scholarname, setScholarname] = useState([]);
     const scholarlist = () => {
 
-        axios.get("http://localhost:8080/Mback/public/scholarTypeshow").then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/scholarTypeshow").then((response) => {
             setScholarname(response.data);
         }); 
      };
