@@ -21,7 +21,7 @@ const ResultContent = ({ id }) => {
 
 
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/Result/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/Result/" + id)
             .then((response) => {
                 setResultinfo(response.data);
             });
