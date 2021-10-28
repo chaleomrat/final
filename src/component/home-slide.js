@@ -34,7 +34,7 @@ import axios from 'axios';
 const Slide = (props) => {
     const [items, setitems] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/Setup_slide")
+        axios.get("http://flashworkbackend.xyz/Mback/public/Setup_slide")
             .then((response) => {
                 setitems(response.data);
             });
