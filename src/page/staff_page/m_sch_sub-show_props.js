@@ -27,11 +27,11 @@ const ShscholarShow = ({ id }) => {
     const [Mscholar, setMscholar] = useState([]);
 
     const updateShscholarShow = () => {
-        axios.get("http://localhost:8080/Mback/public/findSshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findSshcholarship/" + id)
             .then((response) => {
                 setShscholarShow(response.data);
             });
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -45,7 +45,7 @@ const ShscholarShow = ({ id }) => {
     const delectSubSch = async (id) => {
 
         if (id) {
-            axios.delete("http://localhost:8080/Mback/public/delectSubscholarship/" + id)//ส่งค่าไปแอดใน DB
+            axios.delete("https://flashworkbackend.xyz/Mback/public/delectSubscholarship/" + id)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
