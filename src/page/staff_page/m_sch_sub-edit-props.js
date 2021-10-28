@@ -16,7 +16,7 @@ const Shedit = ({ id }) => {
    
     useEffect(() => {
        
-            axios.get("http://localhost:8080/Mback/public/findSshcholarshippage/" + id)
+            axios.get("https://flashworkbackend.xyz/Mback/public/findSshcholarshippage/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
@@ -71,7 +71,7 @@ const Shedit = ({ id }) => {
         )
 
     } else {
-        axios.put("http://localhost:8080/Mback/public/editSubshcholarship/" + id, data)//ส่งค่าไปแอดใน DB
+        axios.put("https://flashworkbackend.xyz/Mback/public/editSubshcholarship/" + id, data)//ส่งค่าไปแอดใน DB
             .then((res) => {
                 console.log(res.data.message);
                 if (res.data.message == "success") {
