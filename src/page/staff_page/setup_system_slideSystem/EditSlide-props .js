@@ -16,7 +16,7 @@ const EditSutup_system = ({ id }) => {
     
     useEffect(() => {
        
-        axios.get("http://localhost:8080/Mback/public/getSetup_slide/"+ id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/getSetup_slide/"+ id)
             .then((response) => {
                 setSetup_system(response.data);
             });
@@ -62,7 +62,7 @@ const EditSutup_system = ({ id }) => {
                 )
 
             } else {
-                axios.put("http://localhost:8080/Mback/public/EditSilde/" + id, data)//ส่งค่าไปแอดใน DB
+                axios.put("https://flashworkbackend.xyz/Mback/public/EditSilde/" + id, data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
