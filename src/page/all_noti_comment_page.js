@@ -21,7 +21,7 @@ const Allcomment_page = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:8080/Mback/public/nottiflyfollowcomment/" + status.id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/nottiflyfollowcomment/" + status.id)
             .then((response) => {
                 setFollowCommet(response.data);
             });
