@@ -59,7 +59,7 @@ const NotShowApprovalScholar = ({ scholar }) => {
             };
 
 
-            axios.put("http://localhost:8080/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -87,7 +87,7 @@ const NotShowApprovalScholar = ({ scholar }) => {
 
             };
 
-            axios.put("http://localhost:8080/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
