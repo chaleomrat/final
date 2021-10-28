@@ -116,7 +116,7 @@ const Manage_system = () => {
                 )
 
             } else {
-                axios.post("http://localhost:8080/Mback/public/Setup_system", data)//ส่งค่าไปแอดใน DB
+                axios.post("https://flashworkbackend.xyz/Mback/public/Setup_system", data)//ส่งค่าไปแอดใน DB
                     .then((res) => {
                         console.log(res.data.message);
                         if (res.data.message == "success") {
