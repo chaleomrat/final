@@ -6,7 +6,7 @@ const Scholarship_Box = ({ id }) => {
    
     const [Mscholar, setMscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/findMshcholarship/" + id)
+        axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholar(response.data);
             });
