@@ -12,7 +12,7 @@ const Agency_page = () => {
         const [Scholarname, setScholarname] = useState([]);
         const scholarlist = () => {
     
-            axios.get("http://localhost:8080/Mback/public/Agency").then((response) => {
+            axios.get("https://flashworkbackend.xyz/Mback/public/Agency").then((response) => {
                 setScholarname(response.data);
             }); 
          };
