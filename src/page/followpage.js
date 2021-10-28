@@ -20,7 +20,7 @@ const Follow = () => {
 
     const [Mscholar, setMscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/followlist/"+session.id)
+        axios.get("https://flashworkbackend.xyz/Mback/public/followlist/"+session.id)
             .then((response) => {
                 setMscholar(response.data);
             });
