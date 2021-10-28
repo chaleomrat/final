@@ -17,7 +17,7 @@ const DelectMs = ({ scholar }) => {
     const Delect = (e) => {
         e.preventDefault();
 
-        axios.delete("http://localhost:8080/Mback/public/DelectidMscholar/" + scholar.msch_id)//ส่งค่าไปแอดใน DB
+        axios.delete("https://flashworkbackend.xyz/Mback/public/DelectidMscholar/" + scholar.msch_id)//ส่งค่าไปแอดใน DB
             .then((res) => {
                 console.log(res.data.message);
                 if (res.data.message == "success") {
