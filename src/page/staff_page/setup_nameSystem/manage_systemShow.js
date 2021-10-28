@@ -21,7 +21,7 @@ const Manage_systemShow = () => {
 
 
     const page = () => {
-        axios.get("http://localhost:8080/Mback/public/Setup_system")
+        axios.get("https://flashworkbackend.xyz/Mback/public/Setup_system")
             .then((response) => {
                 setLogoShow(response.data);
             });
