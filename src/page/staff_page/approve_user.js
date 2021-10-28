@@ -25,7 +25,7 @@ const ApproveUser = () => {
     const [Userlist, setUserlist] = useState([]);
     // ใช้ useState เก็บ สร้าง Userlist
     const updateUserlist = () => {
-        axios.get("http://localhost:8080/Mback/public/manageuser").then((response) => {
+        axios.get("https://flashworkbackend.xyz/Mback/public/manageuser").then((response) => {
             //   รับตัวแปลมาจาก codeigniter แล้วก็มาเก็บไว้ใน setUserlist
             setUserlist(response.data);
         });
