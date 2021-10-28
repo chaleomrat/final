@@ -26,7 +26,7 @@ const ApproveUserDetail = ({ id }) => {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/Mback/public/finduser/" + id)//ส่งค่าไปแอดใน DB
+        axios.get("https://flashworkbackend.xyz/Mback/public/finduser/" + id)//ส่งค่าไปแอดใน DB
             .then((response) => {
                 setInfo(response.data);
             });
@@ -47,7 +47,7 @@ const ApproveUserDetail = ({ id }) => {
             };
 
 
-            axios.post("http://localhost:8080/Mback/public/manageuser", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/manageuser", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -75,7 +75,7 @@ const ApproveUserDetail = ({ id }) => {
             };
 
 
-            axios.post("http://localhost:8080/Mback/public/manageuser", data)//ส่งค่าไปแอดใน DB
+            axios.post("https://flashworkbackend.xyz/Mback/public/manageuser", data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "Deny") {
