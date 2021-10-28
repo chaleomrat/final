@@ -19,31 +19,7 @@ const ShowApprovalScholar = ({ scholar }) => {
         lname: localStorage.getItem('lname'),
         status: localStorage.getItem('status')
     }
-    //////////////////delect///////////////////////
-    // const Delect = (e) => {
-    //     e.preventDefault();
 
-    //     axios.put("http://localhost:8080/Mback/public/ScholarEndEdit/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
-    //         .then((res) => {
-    //             console.log(res.data.message);
-    //             if (res.data.message == "success") {
-    //                 ////ต่อตรงนี้
-    //                 Swal.fire(
-    //                     'ลบทุนสำเร็จ',
-    //                     'ทุนหลังและทุนลองที่อยู่ในทุนนี้จะลบทั้งหมด',
-    //                     'success'
-    //                 )
-    //                     .then(() => window.location.reload())
-
-    //             }
-
-    //         })
-
-    //         .catch((error) => {
-    //             console.log("error");
-    //         });//ใช้ ดัก Error
-
-    // }
     const Delect = (e, a) => {
         e.preventDefault()
 
@@ -59,7 +35,7 @@ const ShowApprovalScholar = ({ scholar }) => {
             };
 
 
-            axios.put("http://localhost:8080/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
@@ -87,7 +63,7 @@ const ShowApprovalScholar = ({ scholar }) => {
 
             };
 
-            axios.put("http://localhost:8080/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
+            axios.put("https://flashworkbackend.xyz/Mback/public/ApprovalSubScholar/" + scholar.ssch_id, data)//ส่งค่าไปแอดใน DB
                 .then((res) => {
                     console.log(res.data.message);
                     if (res.data.message == "success") {
