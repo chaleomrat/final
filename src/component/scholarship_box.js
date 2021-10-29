@@ -11,11 +11,11 @@ const Scholarship_Box = ( {id} ) => {
                 setMscholars(response.data);
             });
     }, [id]);
-     {Mscholar.map((Mainscholars) => {
+    
                                             
                                                                            </Row>
       return (
-        <>
+        <> {Mscholar.map((Mainscholars) => {
                 <div style={{  }}>
                     <img src={Mainscholars.m_img} alt="" style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', width: '100%', marginBottom: '-10px' }}/>
                 </div>
@@ -35,11 +35,11 @@ const Scholarship_Box = ( {id} ) => {
                     </CardBody>
                 </Card>
 
-              
+              })}
         </>
     )
                                        
-})}
+
      
 }
 
