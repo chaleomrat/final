@@ -13,7 +13,7 @@ const Scholarship_Box = ( {id} ) => {
     }, [id]);
     
                                             
-                                                                           </Row>
+                                                                    
       return (
         <> {Mscholar.map((Mainscholars) => {return (
                 <div style={{  }}>
