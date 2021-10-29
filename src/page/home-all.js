@@ -77,7 +77,7 @@ const Home = (props) => {
                                         {Mscholar.map((scholar) => {
 
                                             return (
-                                                <div className="col-12 col-sm-6 col-lg-6 col-BoxContentSetting">
+                                                <div className="col-12 col-sm-6 col-lg-6 col-BoxContentSetting">{scholar.msch_id}
                                                     <div key={scholar.msch_id}><Scholarship_Box id={scholar.msch_id} /></div>
                                                 </div>
                                             );
