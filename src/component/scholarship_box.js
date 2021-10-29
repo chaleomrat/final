@@ -20,7 +20,7 @@ const Scholarship_Box = ({ id }) => {
                     <a href={"/scholarshipMain/" + Mscholars.id}>
                         <CardHeader className="" style={{ background: "#dadce0", borderRadius: "10px", borderBottom: "0px" }}>
                             <h6 className="text-dark" style={{ margin: '0px' }}>
-                                <b>{Mscholar.name} ปี {Mscholars.year}</b>
+                                <b>{Mscholars.name} ปี {Mscholars.year}</b>
                             </h6>
                         </CardHeader>
                     </a>
