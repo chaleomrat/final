@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
-const Scholarship_Box = ( id ) => {
+const Scholarship_Box = ( {id} ) => {
    
     const [Mscholars, setMscholar] = useState([]);
     useEffect(() => {
@@ -26,7 +26,7 @@ const Scholarship_Box = ( id ) => {
                     </a>
                     <CardBody className="text-secondary" style={{ padding: "10px" }}>
                     <div className="borderline" />
-                       {Mscholars.content}
+                       {Mscholars.content}{id}
                         <div className="borderline" />
                         <Button href={"/scholarshipMain/" + Mscholars.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
                     </CardBody>
