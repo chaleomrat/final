@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
 const Scholarship_Box = ({ id }) => {
-   var D = id;
+   var d = id;
    
     const [Mscholar, setMscholar] = useState([]);
     const updateUserlist = () => {
@@ -14,7 +14,7 @@ const Scholarship_Box = ({ id }) => {
     };
     useEffect(() => {
         updateUserlist();
-    }, []);
+    }, [d]);
   
       return (
         <>
@@ -31,7 +31,7 @@ const Scholarship_Box = ({ id }) => {
                     </a>
                     <CardBody className="text-secondary" style={{ padding: "10px" }}>
                     <div className="borderline" />
-                       {Mscholar.content}
+                       {Mscholar.content}{d}
                         <div className="borderline" />
                         <Button href={"/scholarshipMain/" + Mscholar.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
                     </CardBody>
