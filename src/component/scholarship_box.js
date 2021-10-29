@@ -11,8 +11,7 @@ const Scholarship_Box = ({ id }) => {
                 setMscholar(response.data);
             });
     }, [id]);
-      return (
-        <>
+      
          {Mscholar.map((scholar) => {
                                             
                                             return (
@@ -41,8 +40,7 @@ const Scholarship_Box = ({ id }) => {
                
 
               
-        </>
-    )
+     
 }
 
 export default Scholarship_Box;
