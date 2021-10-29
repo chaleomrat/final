@@ -27,6 +27,7 @@ const Home = (props) => {
         axios.get("https://flashworkbackend.xyz/Mback/public/Mshcholarship")
             .then((response) => {
                 setMscholar(response.data);
+            console.log(Mscholar)
             });
             axios.get("https://flashworkbackend.xyz/Mback/public/resultlist")
             .then((response) => {
