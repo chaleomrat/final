@@ -75,7 +75,7 @@ const Home = (props) => {
                                 <div className="EdgeRow-1">
                                     <Row>
                                         {Mscholar.map((scholar) => {
-                                          scholar.msch_id
+
                                             return (
                                                 <div className="col-12 col-sm-6 col-lg-6 col-BoxContentSetting">
                                                     <div key={scholar.msch_id}><Scholarship_Box id={scholar.msch_id} /></div>
