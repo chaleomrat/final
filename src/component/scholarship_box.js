@@ -6,12 +6,16 @@ const Scholarship_Box = ({ id }) => {
    var D = id;
    
     const [Mscholar, setMscholar] = useState([]);
-    useEffect(() => {
+    const updateUserlist = () => {
         axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/" + D)
             .then((response) => {
                 setMscholar(response.data);
             });
-    }, [D]);
+    };
+    useEffect(() => {
+        updateUserlist();
+    }, []);
+  
       return (
         <>
                 <div style={{  }}>
