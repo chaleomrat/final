@@ -4,7 +4,7 @@ import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
 const Scholarship_Box = ({ id }) => {
    
-    const [Mscholar, setMscholar] = useState([]);
+    const [Mscholars, setMscholar] = useState([]);
     useEffect(() => {
         axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
@@ -14,21 +14,21 @@ const Scholarship_Box = ({ id }) => {
       return (
         <>
                 <div style={{  }}>
-                    <img src={Mscholar.m_img} alt="" style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', width: '100%', marginBottom: '-10px' }}/>
+                    <img src={Mscholars.m_img} alt="" style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', width: '100%', marginBottom: '-10px' }}/>
                 </div>
                 <Card className="CardBackground-2" style={{ minHeight: '200px' }}>
-                    <a href={"/scholarshipMain/" + Mscholar.id}>
+                    <a href={"/scholarshipMain/" + Mscholars.id}>
                         <CardHeader className="" style={{ background: "#dadce0", borderRadius: "10px", borderBottom: "0px" }}>
                             <h6 className="text-dark" style={{ margin: '0px' }}>
-                                <b>{Mscholar.name} ปี {Mscholar.year}</b>
+                                <b>{Mscholar.name} ปี {Mscholars.year}</b>
                             </h6>
                         </CardHeader>
                     </a>
                     <CardBody className="text-secondary" style={{ padding: "10px" }}>
                     <div className="borderline" />
-                       {Mscholar.content}
+                       {Mscholars.content}
                         <div className="borderline" />
-                        <Button href={"/scholarshipMain/" + Mscholar.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
+                        <Button href={"/scholarshipMain/" + Mscholars.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
                     </CardBody>
                 </Card>
 
