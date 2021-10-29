@@ -15,7 +15,7 @@ const Scholarship_Box = ( {id} ) => {
                                             
                                                                            </Row>
       return (
-        <> {Mscholar.map((Mainscholars) => {
+        <> {Mscholar.map((Mainscholars) => {return (
                 <div style={{  }}>
                     <img src={Mainscholars.m_img} alt="" style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px', width: '100%', marginBottom: '-10px' }}/>
                 </div>
@@ -34,7 +34,7 @@ const Scholarship_Box = ( {id} ) => {
                         <Button href={"/scholarshipMain/" + Mainscholars.id} className="Button-Style" outline >อ่านทั้งหมด</Button>
                     </CardBody>
                 </Card>
-
+ );
               })}
         </>
     )
