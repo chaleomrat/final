@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
-const Scholarship_Box = ({ id }) => {
+const Scholarship_Box = ( id ) => {
    
     const [Mscholars, setMscholar] = useState([]);
     useEffect(() => {
