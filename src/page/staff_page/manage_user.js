@@ -66,7 +66,7 @@ const ManageUser = () => {
                             <CardBody className="CardBody-WithBoxContent">
                                 จัดการเกี่ยวกับผู้ใช้งานภายในเว็บไซต์
                                 <div className="borderline" />
-                                <Button className="Button-Style headerButton" outline color="info" size="sm" href="javascript:window.open('http://localhost:8080/Mback/public/Import','_blank','height=550,width=700');">
+                                <Button className="Button-Style headerButton" outline color="info" size="sm" href="javascript:window.open('https://flashworkbackend.xyz/Mback/public/Import','_blank','height=550,width=700');">
                                     + เพิ่มรายชื่อนักเรียนจาก Excel
                                 </Button>
                             </CardBody>
