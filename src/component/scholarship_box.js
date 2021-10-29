@@ -3,14 +3,15 @@ import axios from 'axios';
 import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
 const Scholarship_Box = ({ id }) => {
+   var D = id;
    
     const [Mscholar, setMscholar] = useState([]);
     useEffect(() => {
-        axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/"  id)
+        axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/" + D)
             .then((response) => {
                 setMscholar(response.data);
             });
-    }, [id]);
+    }, [D]);
       return (
         <>
                 <div style={{  }}>
