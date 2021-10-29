@@ -4,13 +4,16 @@ import { Card, Button, CardBody, CardHeader } from "reactstrap";
 
 const Scholarship_Box = ( {id} ) => {
    
-    const [Mainscholars, setMscholars] = useState([]);
+    const [Mscholar, setMscholars] = useState([]);
     useEffect(() => {
         axios.get("http://flashworkbackend.xyz/Mback/public/findMshcholarship/" + id)
             .then((response) => {
                 setMscholars(response.data);
             });
     }, [id]);
+     {Mscholar.map((Mainscholars) => {
+                                            
+                                                                           </Row>
       return (
         <>
                 <div style={{  }}>
@@ -35,6 +38,9 @@ const Scholarship_Box = ( {id} ) => {
               
         </>
     )
+                                       
+})}
+     
 }
 
 export default Scholarship_Box;
